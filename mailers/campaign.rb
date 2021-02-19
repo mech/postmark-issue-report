@@ -4,7 +4,7 @@ class Campaign < ActionMailer::Base
   def send_email(email:, source:)
     mail(
       to: email,
-      from: "mech@me.com",
+      from: "tech1@jobline.com.sg",
       subject: "Test PostMark - From: #{source}"
     )
   end

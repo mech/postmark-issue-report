@@ -4,6 +4,7 @@ require "bundler/setup"
 Bundler.require
 
 require "action_mailer"
+require "active_support/json/encoding"
 
 require_relative "mailers/campaign"
 
@@ -31,4 +32,4 @@ ActionMailer::Base.postmark_settings = {
 #   enable_starttls_auto: true
 # }
 
-Campaign.send_email(email: "mech@me.com", source: "AWS").deliver
+Campaign.send_email(email: "mech@me.com", source: "PostMark").deliver
